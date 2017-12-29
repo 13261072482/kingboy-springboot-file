@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class KingboySpringbootFileApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(KingboySpringbootFileApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(KingboySpringbootFileApplication.class, args);
+    }
 }
