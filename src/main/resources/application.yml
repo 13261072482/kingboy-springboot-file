@@ -3,3 +3,7 @@ server:
 spring:
   application:
     name: kingboy-springboot-file
+  http:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB

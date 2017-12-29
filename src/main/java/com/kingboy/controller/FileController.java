@@ -31,6 +31,16 @@ public class FileController {
      */
     @PostMapping
     public String upload(@RequestParam("file") MultipartFile file) throws IOException {
+        //获取文件的大小，以size为准
+        long size = file.getSize();
+        int available = file.getInputStream().available();
+        int length = file.getBytes().length;
+        //获取参数名，也就是"file"
+        String name = file.getName();
+        //获取文件原本的名称
+        String originName = file.getOriginalFilename();
+
+        //保存文件
         String fileName = UUID.randomUUID().toString();
         String filePath = "/Users/kingboy/Desktop/" + fileName;
         Files.copy(file.getInputStream(), Paths.get(filePath));
